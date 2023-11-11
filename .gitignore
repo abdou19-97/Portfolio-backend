@@ -1,0 +1,16 @@
+# .gitignore
+*.pyc
+*.sqlite3
+*.log
+*.tmp
+.DS_Store
+venv/
+node_modules/
+__pycache__
+migrations
+settings_local.py
+settings_prod.py
+render.yaml
+.env
+```
+

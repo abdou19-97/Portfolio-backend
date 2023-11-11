@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  server-side:
+    container_name: django-container_name
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    env_file:
+      - .env
+  db:
+    container_name: postgres-container
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_DB=django
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql
+volumes:
+  postgresdb:
