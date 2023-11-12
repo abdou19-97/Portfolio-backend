@@ -29,15 +29,15 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
 # # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG")
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
+DEBUG = os.environ.get("DEBUG", default=False)
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])
 
 if DEBUG:
     # Development
-    ALLOWED_HOSTS = env.list('ALLOWED_HOSTS_DEV')
+    ALLOWED_HOSTS = env.list('ALLOWED_HOSTS_DEV', default=[])
 else: 
     # Production 
-    ALLOWED_HOSTS = env.list('ALLOWED_HOSTS_DEPLOY')
+    ALLOWED_HOSTS = env.list('ALLOWED_HOSTS_DEPLOY', default=[])
 
 # Application definition
 
