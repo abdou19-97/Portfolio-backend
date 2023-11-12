@@ -45,16 +45,4 @@ def comment_create(request, pk):
     return JsonResponse(serializer.errors, safe=False)
 
 
-# @api_view(['GET'])
-# def post_detail(request, pk):
-#     post = get_object_or_404(Post, pk=pk)
-#     serializer = PostSerializer(post)
-#     return Response(serializer.data)
 
-# # the purpose of this function is to get all the comments for a post
-# @api_view(['GET'])
-# def comment_list(request, pk):
-#     post = get_object_or_404(Post, pk=pk)
-#     comments = post.comments.all()  # Use the related name to get all comments
-#     serializer = CommentSerializer(comments, many=True)
-#     return Response(serializer.data)
