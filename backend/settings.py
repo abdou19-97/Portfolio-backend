@@ -30,14 +30,14 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 # # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", default=False)
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS_DEPLOY')
 
-if DEBUG:
-    # Development
-    ALLOWED_HOSTS = env.list('ALLOWED_HOSTS_DEV', default=[])
-else: 
-    # Production 
-    ALLOWED_HOSTS = env.list('ALLOWED_HOSTS_DEPLOY', default=[])
+# if DEBUG:
+#     # Development
+#     ALLOWED_HOSTS = env.list('ALLOWED_HOSTS_DEV', default=[])
+# else: 
+#     # Production 
+#     ALLOWED_HOSTS = env.list('ALLOWED_HOSTS_DEPLOY', default=[])
 
 # Application definition
 
@@ -96,12 +96,12 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 database_url = os.environ.get('DATABASE_URL')
 DATABASES['default'] = dj_database_url.parse(database_url)
 
