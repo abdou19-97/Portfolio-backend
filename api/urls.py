@@ -1,5 +1,5 @@
 # from django.conf.urls import include
-from django.urls import path
+from django.urls import path, include
 # Import router from rest_framework
 from rest_framework import routers
 from . import views
@@ -11,8 +11,9 @@ router.register('posts', views.PostViewSet)
 router.register('comments', views.CommentViewSet)
 
 urlpatterns = [
-  path('posts/', views.PostViewSet.as_view(), name='posts'),
-  path('comments/', views.CommentViewSet.as_view(), name='comments'),
+  # path('posts/', views.PostViewSet.as_view(), name='posts'),
+  # path('comments/', views.CommentViewSet.as_view(), name='comments'),
+  path('', include(router.urls)),
 
 ]
 
