@@ -45,7 +45,6 @@ ALLOWED_HOSTS = env.list('ALLOWED_HOSTS_DEPLOY')
 
 INSTALLED_APPS = [
     'api',
-    'frontend',
     'rest_framework',
     'corsheaders',
     'ckeditor',
