@@ -10,12 +10,12 @@ This website serves as a showcase for my web development expertise. It's an ongo
 In the following sections, I'll delve deeper into each technology's implementation and its specific contribution to the development of this web application.
 
 ## Backend Development
-	This section details the step-by-step backend development process, accompanied by screenshots showcasing the directory structure and the challenges encountered during the development. Throughout this phase, I utilized VS Code as my primary text editor.
+This section details the step-by-step backend development process, accompanied by screenshots showcasing the directory structure and the challenges encountered during the development. Throughout this phase, I utilized VS Code as my primary text editor.
 Commencing the Django project, the initial steps involved the following instructions: 
-1.	Installing Django:
+* Installing Django:
 In the terminal within the VS code, I executed the following command:
  $ pip install Django
-2.	Creating the project:
+* Creating the project:
 I generated the project using:
 $ django-admin startmyproject server-side
 This command generated a server-side directory in my current directory that looks like the following:
