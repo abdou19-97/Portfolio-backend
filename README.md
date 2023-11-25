@@ -106,11 +106,12 @@ To generate a build folder I typed the following command:
 
 ## Deployment:
 
-	Deployment involves the process of preparing a software application for usage by configuring and making available its code, databases, configuration files, and other related components on a server or hosting environment.
+Deployment involves the process of preparing a software application for usage by configuring and making available its code, databases, configuration files, and other related components on a server or hosting environment.
 For this project, I opted for two different web hosting services: Render for hosting the Postgres SQL and the backend, and Versel for the frontend built with ReactJS. Initially, I attempted to host the entire project on Render but encountered difficulties in configuring static files. After extensive troubleshooting, I found it more convenient to split the web app across different hosting providers.
 In the forthcoming sections, I will provide a detailed walkthrough of how I deployed this project on both Render and Vercel.
 
 ## Render:
+
 To begin deploying on Render, I navigated to the Render website and signed up using GitHub to facilitate easy connection with my GitHub repository for the backend.
 Initially, I configured PostgreSQL to store the database housing the Post and Comment data. Below are screenshots of the PostgreSQL setup on Render
 
