@@ -15,7 +15,9 @@ This section details the step-by-step backend development process, accompanied b
 Commencing the Django project, the initial steps involved the following instructions: 
 * Installing Django:
 In the terminal within the VS code, I executed the following command:
- $ pip install Django
+
+$ pip install Django
+
 * Creating the project:
 I generated the project using:
 $ django-admin startmyproject server-side
