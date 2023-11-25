@@ -18,7 +18,9 @@ In the terminal within the VS code, I executed the following command:
 `$ pip install Django`
 * Creating the project:
 I generated the project using:
-$ django-admin startmyproject server-side
+
+`$ django-admin startmyproject server-side`
+
 This command generated a server-side directory in my current directory that looks like the following:
 
 `server-side/
