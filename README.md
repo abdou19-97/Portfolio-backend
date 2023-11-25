@@ -49,4 +49,22 @@ backend/urls.py: This file hosts URL declarations for the project, encompassing 
 backend/asgi.py and backend/wsgi.py: These files are responsible for serving the Python project via the ASGI and WSGI protocols, respectively.
 
 ![backend](https://github.com/abdou19-97/Portfolio-backend/blob/main/backend.png?raw=true)
+This is a Visual of what the backend structure looks like.
+
+To create my app directory, I made sure that I was in the same directory where my manage.py is located which is the server-side directory and then I typed the following command:
+
+ `$ python manage.py startapp api`
+ 
+This will create a directory api which will look like this:
+
+![api](https://github.com/abdou19-97/Portfolio-backend/blob/main/api.png?raw=true)
+
+* api/models.py: This file encapsulates the core models for this project, introducing the "Post" and "Comment" classes. Given that this is my initial Django project, I've kept the model structure simple for now. I intend to refine and expand this model in future iterations.
+* api/serializer.py: Responsible for the serialization and deserialization processes, this file handles the conversion of model instances, such as "Post" and "Comment," into native Python data types. These converted data types can be seamlessly transformed into formats like JSON or XML.
+* api/urls.py: This module focuses on configuring the URLs about comments and posts within the application, establishing the endpoints and routing for handling these specific functionalities.
+* api/admin.py: This file plays a pivotal role in integrating the Django admin interface with the project. It allows me to register the application's models—such as "Post" and "Comment"—to be managed via the admin interface. This enables an easy-to-use administrative panel for handling and modifying the data stored in these models.
+* api/views.py: Serving as a pivotal component of Django's MVC (Model-View-Controller) architecture, this file houses the views or "controllers" of the application. Here, I define the logic that dictates how data from the models interacts with the user interface. It includes functions responsible for handling HTTP requests, processing data, and rendering appropriate responses. These views form the backbone of the application's functionality, determining how data is presented to the users and how user inputs are processed.
+* api/tests.py: Within this file, I've crafted test cases to ensure the functionality and reliability of the application. These tests are crucial as they validate the expected behavior of the different components of the project. They cover various scenarios, including data input, interactions, and processing, helping maintain the integrity and performance of the application.
+
+
 
