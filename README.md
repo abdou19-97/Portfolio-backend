@@ -15,15 +15,13 @@ This section details the step-by-step backend development process, accompanied b
 Commencing the Django project, the initial steps involved the following instructions: 
 * Installing Django:
 In the terminal within the VS code, I executed the following command:
-
-$ pip install Django
-
+`$ pip install Django`
 * Creating the project:
 I generated the project using:
 $ django-admin startmyproject server-side
 This command generated a server-side directory in my current directory that looks like the following:
 
-server-side/
+`server-side/
    	 manage.py
     	 backend/
         __init__.py
@@ -31,6 +29,7 @@ server-side/
         urls.py
         asgi.py
         wsgi.py
+   `
 
 The outermost server-side directory serves as the encompassing container for the project, while the inner backend directory represents the actual project package, renamed from the default to prevent conflicts.
 server-side/manage.py: This file serves as an interface for Django, enabling various functionalities like running the server, creating admin superusers, or generating apps.
