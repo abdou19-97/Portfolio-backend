@@ -149,11 +149,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/static/'
-# STATIC_URL = 'https://staticfiles-fdt8.onrender.com/'
-STATICFILES_DIRS = [STATIC_DIR,]
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS = [STATIC_DIR,]
 
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [STATIC_DIR,]  # Define your static directories here
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Directory to collect static files
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 

@@ -1,5 +1,6 @@
 from django.db import models
 from ckeditor.fields import RichTextField
+
 # Create your models here.
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=False)
@@ -7,7 +8,7 @@ class Post(models.Model):
     content = RichTextField()
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
-    
+
     def __str__(self):
         return self.title + ' ' + self.content + ' ' + str(self.date_created) + ' ' + str(self.date_updated)
 
