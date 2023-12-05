@@ -19,7 +19,8 @@ env = environ.Env()
 environ.Env.read_env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+
+STATIC_DIR = BASE_DIR / 'static'
 # STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
 
@@ -80,7 +81,7 @@ ROOT_URLCONF = 'backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR,],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -149,12 +150,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-# STATIC_URL = '/static/'
-# STATICFILES_DIRS = [STATIC_DIR,]
-
 STATIC_URL = '/static/'
-# STATICFILES_DIRS = [STATIC_DIR,]  # Define your static directories here
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Directory to collect static files
+STATICFILES_DIRS = [STATIC_DIR]  # Define your static directories here
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
