@@ -20,7 +20,7 @@ environ.Env.read_env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
-STATIC_DIR = os.path.join(BASE_DIR, 'static')
+# STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
 
 # Quick-start development settings - unsuitable for production
@@ -153,7 +153,7 @@ USE_TZ = True
 # STATICFILES_DIRS = [STATIC_DIR,]
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [STATIC_DIR,]  # Define your static directories here
+# STATICFILES_DIRS = [STATIC_DIR,]  # Define your static directories here
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Directory to collect static files
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
